@@ -1,0 +1,45 @@
+<!-- // IFRAME HTML -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style>
+        #iframebox {
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+        }
+        h2 {
+            color: #fff;
+        }
+    </style>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id="iframebox">
+        <h2>Text Text</h2>
+    </div>
+
+
+    <script>
+        $(function () {
+            var iframes = parent.document.getElementsByTagName("iframe");
+            console.log(iframes + ' iframe');
+            for (var i = 0; i < iframes.length; i++) {
+                var iframeGetAttribute = iframes[i].getAttribute("class");
+                console.log(iframeGetAttribute + ' iframe GetAttribute');
+                if (iframeGetAttribute == 'xyz') {
+                    // ITS ALL WORKING FINE 
+                }
+            }
+        });
+    </script>
+</body>
+
+
+</html>
